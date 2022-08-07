@@ -53,12 +53,12 @@ function animatePress(currentColor) {
 function checkAnswer(currentLevel) {
     if (gamePattern[currentLevel] === userClickedPattern[currentLevel]) {
         if (userClickedPattern.length === gamePattern.length) {
-            if (level < 2) {
+            if (level < 5) {
                 setTimeout(function () {
                     nextSequence();
                 }, 1000)
             }
-            if (level >= 2) {
+            if (level >= 5) {
                 $("h1").text("Настя-ты лучшая,нажми любую кнопку чтобы перезапустить игру");
                 var win = new Audio("sounds/win.mp3");
                 win.play();
